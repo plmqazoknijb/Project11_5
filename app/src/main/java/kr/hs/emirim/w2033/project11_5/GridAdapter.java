@@ -14,6 +14,10 @@ public class GridAdapter extends BaseAdapter {
                         R.drawable.i06, R.drawable.i07, R.drawable.i08, R.drawable.i09, R.drawable.i10,
                         R.drawable.i01, R.drawable.i02, R.drawable.i03, R.drawable.i04, R.drawable.i05,
                         R.drawable.i06, R.drawable.i07, R.drawable.i08, R.drawable.i09, R.drawable.i10};
+    int[] titleIds = {R.string.posterID_1, R.string.posterID_2, R.string.posterID_3, R.string.posterID_4, R.string.posterID_5,
+                        R.string.posterID_6, R.string.posterID_7, R.string.posterID_8, R.string.posterID_9, R.string.posterID_10,
+                        R.string.posterID_1, R.string.posterID_2, R.string.posterID_3, R.string.posterID_4, R.string.posterID_5,
+                        R.string.posterID_6, R.string.posterID_7, R.string.posterID_8, R.string.posterID_9, R.string.posterID_10,};
 
     public GridAdapter(Context context){
         this.context = context;
@@ -50,7 +54,7 @@ public class GridAdapter extends BaseAdapter {
                 View dialogView = View.inflate(context,R.layout.dialog1,null);
                 ImageView imgvLarge= dialogView.findViewById(R.id.imgv_large);
                 imgvLarge.setImageResource(posterIds[pos]);
-                dialog.setTitle("Large Poster");
+                dialog.setTitle(titleIds[pos]);
                 dialog.setIcon(R.drawable.movie);
                 dialog.setView(dialogView);
                 dialog.setNegativeButton("close",null);
